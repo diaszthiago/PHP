@@ -22,15 +22,19 @@
                 SE DER FALSO O RESULTADO, ENTÃO
                 ESTE BLOCO SERÁ EXECUTADO
             }
+ 
             No PHP, fica assim...:
+ 
             if(<condição>) {
                 //true...
             } else {
                 //false...
             }
             
+ 
             Dentro da condição booleana, o PHP suporta
             operações lógicas... as principais são:
+ 
             ==   -> Comparação entre valores. Ex: 2 == 2 -> Verdadeiro
             !=   -> Diferente. Ex: 2 != 5 -> Verdadeiro
             < ou >    -> menor ou maior. Ex: 2 > 5  -> Falso
@@ -39,26 +43,27 @@
             ... vamos praticar...  
         */
 
-        $x = "34"; //x é uma variável do tipo "string"
-        $y = 34;
-        $fumante = false;
+            $x = "34"; //x é uma variável do tipo "string"
+            $y = 34;
+            $fumante = false;
+    
+    
+            if($x === $y) {
+                echo "X é igual a Y!";
+            } else {
+                echo "X é diferente de Y!";
+            }
+    
+            echo "<br>";
+    
+            if($fumante) {
+                echo "É fumante...";
+            } else {
+                echo "Não fuma...!";
+            }
 
 
-        if($x === $y) {
-            echo "X é igual a Y!";
-        } else {
-            echo "X é diferente de Y!";
-        }
-
-        echo "<br>";
-
-        if($fumante) {
-            echo "É fumante...";
-        } else {
-            echo "Não fuma...!";
-        }
 
     ?>
-
 </body>
 </html>
