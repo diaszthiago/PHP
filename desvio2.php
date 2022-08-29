@@ -8,23 +8,25 @@
 </head>
 <body>
     <?php
-
+ 
     /*
         O execício funciona assim...
         se o usuário não tem cartão fidelidade, então 
         deve-se pagar o frete completo, ou seja, 
         o valor total = valor da compra + frete
+ 
         Se o usuário tem cartão fidelidade, ele pode ter
         um desconto no frete, com as seguintes regras:
         - Compra acima de 500 reais, frete 0
         - Compra acima de 200 reais, frete 10
         - Compra acima de 100 reais, frete 15
+ 
     */
-
+ 
         $cartao_fidelidade = true;
         $valor_compra = 150;
         $valor_frete = 20;
-
+ 
         if($cartao_fidelidade && $valor_compra >= 500) {
             $valor_frete = 0;
         } else if($cartao_fidelidade && $valor_compra >= 200) {
@@ -32,15 +34,15 @@
         } else if($cartao_fidelidade && $valor_compra >= 100) {
             $valor_frete = 15;
         }
-
+ 
     ?>
-
+ 
     <h2>Resumo do pedido:</h2>
     <p><b>Possui cartão fidelidade? </b> <?= $cartao_fidelidade ? 'Sim' : 'Não' ?> </p>
     <p><b>Valor dos produtos: </b> R$ <?= $valor_compra ?></p>
     <p><b>Valor do frete: </b> R$ <?= $valor_frete ?> </p>
     <p><b>Valor total: </b> R$ <?= $valor_compra + $valor_frete ?></p>
-
+ 
     <!-- 
         Operador ternário....
         
@@ -51,6 +53,7 @@
                 bloco se o if der falso
             }
         podemos transformar isso em um operador ternário...
+ 
         <condição booleana> ? <valor se verdadeiro> : <valor se falso>
      -->
 </body>
